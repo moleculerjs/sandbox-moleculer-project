@@ -1,5 +1,5 @@
 {
-  "name": "sandbox-moleculer-project",
+  "name": "moleculer-project",
   "version": "1.0.0",
   "description": "Simple Node Sandbox",
   "main": "services/greeter.service.js",
