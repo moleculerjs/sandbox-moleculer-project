@@ -1,0 +1,20 @@
+{
+  "name": "sandbox-moleculer-project",
+  "version": "1.0.0",
+  "description": "Simple Node Sandbox",
+  "main": "services/greeter.service.js",
+  "scripts": {
+    "start": "nodemon --exec node_modules/moleculer/bin/moleculer-runner.js services"
+  },
+  "devDependencies": {
+    "moleculer-repl": "^0.5.3",
+    "nodemon": "1.18.4"
+  },
+  "dependencies": {
+    "moleculer-web": "^0.8.0",
+    "moleculer": "^0.13.0"
+  },
+  "engines": {
+    "node": ">= 8.x.x"
+  }
+}
