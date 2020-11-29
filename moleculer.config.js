@@ -49,7 +49,7 @@ module.exports = {
     // Backoff factor for delay. 2 means exponential backoff.
     factor: 2,
     // A function to check failed requests.
-    check: err => err && !!err.retryable
+    check: (err) => err && !!err.retryable
   },
 
   // Limit of calling level. If it reaches the limit, broker will throw an MaxCallLevelError error. (Infinite loop protection)
@@ -75,7 +75,7 @@ module.exports = {
   registry: {
     // Define balancing strategy.
     // Available values: "RoundRobin", "Random", "CpuUsage", "Latency"
-    strategy: "RoundRobin",
+    strategy: "CpuUsage",
     // Enable local action call preferring.
     preferLocal: true
   },
@@ -93,7 +93,7 @@ module.exports = {
     // Number of milliseconds to switch from open to half-open state
     halfOpenTime: 10 * 1000,
     // A function to check failed requests.
-    check: err => err && err.code >= 500
+    check: (err) => err && err.code >= 500
   },
 
   // Settings of bulkhead feature. More info: https://moleculer.services/docs/0.13/fault-tolerance.html#Bulkhead

@@ -21,7 +21,10 @@ module.exports = {
      * @returns
      */
     hello() {
-      return "Hello Moleculer";
+      const x = new Array(5).fill(1);
+      console.log("hellooo");
+      x.forEach((s, i) => console.log(i));
+      return "Hello Moleculereee";
     },
 
     /**
